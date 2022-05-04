@@ -1,4 +1,4 @@
-package filtrado;
+package operador.filtrado;
 
 import model.Persona;
 import operador.creacion.Creacion;

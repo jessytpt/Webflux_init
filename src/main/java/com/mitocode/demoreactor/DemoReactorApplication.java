@@ -1,11 +1,9 @@
 package com.mitocode.demoreactor;
 
-import filtrado.Filtrado;
+import operador.combinacion.Combinacion;
+import operador.filtrado.Filtrado;
 import io.reactivex.Observable;
 import model.Persona;
-import operador.creacion.Creacion;
-import org.apache.commons.logging.Log;
-import org.eclipse.sisu.inject.Logs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -13,7 +11,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import transformacion.Transformacion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,11 +81,15 @@ public void fluxMono(){
 		//app.flatMap();
 		//app.groupBy();
 
-		Filtrado app = new Filtrado();
+		//Filtrado app = new Filtrado();
 		//app.distinct();
 		//app.take();
 		//app.takeLast();
 		//app.skip();
-		app.skipLast();
+		//app.skipLast();
+
+		Combinacion app = new Combinacion();
+		//app.merge();
+		app.zipWith();
 	}
 }

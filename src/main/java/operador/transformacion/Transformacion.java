@@ -1,4 +1,4 @@
-package transformacion;
+package operador.transformacion;
 
 import model.Persona;
 import operador.creacion.Creacion;
