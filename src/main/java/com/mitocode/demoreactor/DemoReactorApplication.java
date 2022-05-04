@@ -1,7 +1,9 @@
 package com.mitocode.demoreactor;
 
+import filtrado.Filtrado;
 import io.reactivex.Observable;
 import model.Persona;
+import operador.creacion.Creacion;
 import org.apache.commons.logging.Log;
 import org.eclipse.sisu.inject.Logs;
 import org.slf4j.Logger;
@@ -11,6 +13,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import transformacion.Transformacion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +74,21 @@ public void fluxMono(){
 	public void run(String... args) throws Exception {
 		//mono();
 		//flux();
-		fluxMono();
+/*
+		Creacion creacion = new Creacion();
+		creacion.range();
+		creacion.repeat();
+*/
+		//Transformacion app = new Transformacion();
+		//app.map();
+		//app.flatMap();
+		//app.groupBy();
+
+		Filtrado app = new Filtrado();
+		//app.distinct();
+		//app.take();
+		//app.takeLast();
+		//app.skip();
+		app.skipLast();
 	}
 }
