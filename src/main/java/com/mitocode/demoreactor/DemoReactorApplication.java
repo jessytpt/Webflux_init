@@ -6,6 +6,7 @@ import operador.error.ErrorOp;
 import operador.filtrado.Filtrado;
 import io.reactivex.Observable;
 import model.Persona;
+import operador.matematico.Matematico;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -98,9 +99,16 @@ public void fluxMono(){
 		app.retry();
 		app.errorMap();*/
 
-		Condicional app = new Condicional();
+		//Condicional app = new Condicional();
 		//app.defaultEmpy();
 		//app.takeUntil();
-		app.timeout();
+		//app.timeout();
+
+		Matematico app = new Matematico();
+		//app.average();
+		//app.count();
+		//app.min();
+		//app.sum();
+		//app.summarizing();
 	}
 }
