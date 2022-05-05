@@ -1,6 +1,8 @@
 package com.mitocode.demoreactor;
 
 import operador.combinacion.Combinacion;
+import operador.condicional.Condicional;
+import operador.error.ErrorOp;
 import operador.filtrado.Filtrado;
 import io.reactivex.Observable;
 import model.Persona;
@@ -88,8 +90,17 @@ public void fluxMono(){
 		//app.skip();
 		//app.skipLast();
 
-		Combinacion app = new Combinacion();
+		/*Combinacion app = new Combinacion();
 		//app.merge();
-		app.zipWith();
+		app.zipWith();*/
+
+		/*ErrorOp app = new ErrorOp();
+		app.retry();
+		app.errorMap();*/
+
+		Condicional app = new Condicional();
+		//app.defaultEmpy();
+		//app.takeUntil();
+		app.timeout();
 	}
 }
