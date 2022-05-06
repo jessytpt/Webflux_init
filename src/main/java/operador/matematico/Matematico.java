@@ -65,7 +65,7 @@ public class Matematico {
 
         Flux.fromIterable(personas)
                 .collect(Collectors.summarizingInt(Persona::getEdad))
-                .subscribe(x -> log.info("Resumen: "+x));
+                .subscribe(x -> log.info("Resumeng: "+x));
     }
 
 }
